@@ -11,6 +11,8 @@ const ScApp = styled.div`
   width: 100vw;
   box-sizing: border-box;
   padding: 0 10%;
+  overflow: hidden;
+  position: relative;
 `
 
 const ScMainWrapper = styled.div`
