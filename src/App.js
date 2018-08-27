@@ -39,6 +39,7 @@ const ScCircleBottom = styled.div`
     position: absolute;
     bottom: -20%;
     left: -20%;
+    opacity: 0.3;
 `
 
 class App extends Component {
