@@ -7,19 +7,18 @@ import Intro from './moduels/intro';
 const ScApp = styled.div`
   background-image: linear-gradient(#6955E2, #28A6C8);
   background-size: 300px 300vh;
-  height: 100vh;
   width: 100vw;
   box-sizing: border-box;
-  padding: 0 10%;
   overflow: hidden;
   position: relative;
+  padding-bottom: 500px;
 `
 
 const ScMainWrapper = styled.div`
   position:relative;
   z-index: 10;
+  display: flex;
 `
-
 const ScCircleTop = styled.div`
   width: 1500px;
   height: 1500px;
@@ -46,10 +45,8 @@ class App extends Component {
   render() {
     return (
       <ScApp>
-        <ScMainWrapper>
-          <Nav/>
-          <Intro/>
-        </ScMainWrapper>
+        <Nav/>
+        <Intro/>
         <ScCircleTop/>
         <ScCircleBottom/>
       </ScApp>

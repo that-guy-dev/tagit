@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import { LogoW } from '../assets/icon';
+import App from '../assets/app.png';
 
 const ScIntroWrapper = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-top: 150px;
-  width: 800px;
-  
-
+  position: relative;
+  z-index: 10;
+  padding: 0 0 0 10%;
 `
 const ScText = styled.div`
   display: flex;
   flex-direction: column;
-  height: 50vh;
-  justify-content: space-between;
+  justify-content: space-evenly;
 `
 
 const ScItem = styled.div`
@@ -76,6 +73,15 @@ const ScButton = styled.div`
   cursor: pointer;
 `
 
+const ScImg = styled.div`
+    background-image: url( ${App} );
+    transform: rotate(3deg);
+    width: 2070px;
+    height: 980px;
+    margin-left: 52px;    
+    position: relative;
+    left: 30px;
+`
 
 const Intro = () => {
   return (
@@ -97,6 +103,7 @@ const Intro = () => {
           </ScEmailSection>
         </ScItem>  
         </ScText>
+        <ScImg />
     </ScIntroWrapper>
   );
 }
