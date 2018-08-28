@@ -10,7 +10,7 @@ const ScIntroWrapper = styled.div`
   z-index: 10;
   padding: 0 0 0 10%;
   @media (min-width: 2150px) {
-    padding: 0 0 0 20%;
+    padding: 0 0 0 25%;
   }
 `
 const ScText = styled.div`
