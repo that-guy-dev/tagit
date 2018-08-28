@@ -21,7 +21,7 @@ const ScMainWrapper = styled.div`
 const ScCircleTop = styled.div`
   width: 1500px;
   height: 1500px;
-  background: rgb(91, 95, 203) none repeat scroll 0% 0%;
+  background: rgb(91, 95, 203);
   opacity: 0.6;
   border-radius: 100%;
   position: absolute;
