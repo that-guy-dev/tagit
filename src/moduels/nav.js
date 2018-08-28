@@ -22,7 +22,7 @@ const ScNavItemWrapper = styled.div`
   justify-content: space-between;
 `
 const ScNavItem= styled.a`
-  margin-left: 130px;
+  margin-left: 100px;
   color: white;
   text-decoration: none;
 `
