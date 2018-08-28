@@ -17,6 +17,9 @@ const ScText = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  @media (min-width: 2150px) {
+    width: 40%;
+  }
 `
 
 const ScItem = styled.div`
