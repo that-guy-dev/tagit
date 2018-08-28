@@ -74,7 +74,7 @@ const ScButton = styled.div`
 `
 
 const ScImg = styled.div`
-    background: url( ${App} ) no-repeat center;
+    background: url( ${App} ) no-repeat;
     transform: rotate(3deg);
     width: 2070px;
     height: 980px;
