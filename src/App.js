@@ -7,7 +7,6 @@ import Intro from './moduels/intro';
 const ScApp = styled.div`
   background-image: linear-gradient(#6955E2, #28A6C8);
   background-size: 300px 300vh;
-  width: 100vw;
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
