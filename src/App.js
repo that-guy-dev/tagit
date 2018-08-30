@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Nav from './moduels/nav';
 import Intro from './moduels/intro';
+import Features from './moduels/features';
 
 const ScApp = styled.div`
   background-image: linear-gradient(#6955E2, #28A6C8);
@@ -47,6 +48,7 @@ class App extends Component {
       <ScApp>
         <Nav/>
         <Intro/>
+        <Features/>
         <ScCircleTop/>
         <ScCircleBottom/>
       </ScApp>
