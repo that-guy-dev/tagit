@@ -32,9 +32,9 @@ const Nav = () => {
     <ScNavWrapper>
       <LogoW/>
       <ScNavItemWrapper>
-        <ScNavItem href="#">Why</ScNavItem>
-        <ScNavItem href="#">Features</ScNavItem>
-        <ScNavItem href="#">Sign up</ScNavItem>
+        {/* <ScNavItem href="#">Why</ScNavItem> */}
+        {/* <ScNavItem href="#">Features</ScNavItem> */}
+        {/* <ScNavItem href="#">Sign up</ScNavItem> */}
       </ScNavItemWrapper>
     </ScNavWrapper>
   );

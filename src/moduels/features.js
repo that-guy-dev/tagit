@@ -6,6 +6,9 @@ const ScWhy = styled.div`
   z-index: 100;
   position: relative;
   padding: 60px 10%;
+  @media (min-width: 2150px) {
+    padding: 60px 25%;
+  }
 `
 const ScFeature = styled.div`
   display: flex;
@@ -26,11 +29,18 @@ const ScFeatureHeadline = styled.h1`
 `
 
 const ScFeatureItemWrapper = styled.div`
-  width: calc(100vw/3);
+  width: calc(100vw/2.8);
   height: auto;  
   background: #fff;
   box-shadow: 0px 11px 27px rgba(0,0,0,0.25);
   border-radius: 10px 10px 0px 0px;
+  @media (min-width: 2150px) {
+    width: calc(100vw/5);
+  }
+  @media (max-width: 1000px) {
+    width: 100%;
+    margin-bottom: 45px;
+  }
 `
 
 const ScFeatureItem = styled.div`
