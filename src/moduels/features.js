@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Save, Organize, Reminder, Highlight, Share, Recommended, Central, Offline } from '../assets/icon';
+import App from '../assets/app.png';
 
 const ScWhy = styled.div`
   z-index: 100;
@@ -70,6 +71,72 @@ const ScP = styled.p`
   line-height: 26px;
   font-size: 1.1em;
 `
+
+
+const ScMessage = styled.p`  
+font-size: 1.2em;
+  font-weight: 100;
+  line-height: 30px;
+  color: white;
+  text-align: center;
+`
+
+const ScEmailSection = styled.div`  
+  width: 600px;
+  margin: auto;
+  position: relative;
+  bottom: 200px;
+`
+
+const ScEmail = styled.div`  
+  display: flex;
+  justify-content: space-between;
+`
+
+const ScInput = styled.input`  
+  background: #fff;
+  color: #40359C;
+  height: 47px;
+  width: 55%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  padding-left: 10px;
+  font-size: 1em;
+  &::placeholder {
+    color: #40359C;
+    opacity: 0.5;
+  }
+`
+
+const ScButton = styled.div`  
+  background: #40359C;
+  color: #fff;
+  height: 50px;
+  width: 40%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+`
+
+const ScImg = styled.div`
+    background: url( ${App} ) no-repeat;
+    transform: rotate(3deg);
+    width: 2070px;
+    height: 980px;
+    margin-left: 52px;    
+    position: relative;
+    left: 30px;
+`
+
+const ScItem = styled.div`
+`
+
 
 const Features = (props) => {
   return (
@@ -155,6 +222,15 @@ const Features = (props) => {
           <ScP>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</ScP>
         </ScFeatureItemWrapper>
       </ScFeature>
+
+        <ScEmailSection >
+          <ScMessage>Get notified when we launch</ScMessage>
+          <ScEmail>
+              <ScInput placeholder="Email..."/>
+              <ScButton>Submit</ScButton>
+          </ScEmail>
+        </ScEmailSection>
+
     </ScWhy>
   );
 }

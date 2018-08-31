@@ -101,7 +101,7 @@ const Intro = () => {
         </ScItem>    
         <ScItem>
           <ScEmailSection>
-            <ScMessage>Want to know more, sign up for early access</ScMessage>
+            <ScMessage>Get notified when we launch</ScMessage>
             <ScEmail>
                 <ScInput placeholder="Email..."/>
                 <ScButton>Submit</ScButton>

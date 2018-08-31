@@ -11,7 +11,6 @@ const ScApp = styled.div`
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
-  padding-bottom: 500px;
 `
 
 const ScCircleTop = styled.div`
