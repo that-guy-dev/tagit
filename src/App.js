@@ -36,6 +36,20 @@ const ScCircleBottom = styled.div`
     opacity: 0.3;
 `
 
+const ScSmall = styled.small`
+    width: 100vw;
+    background: black;
+    color: white;
+    position: relative;
+    z-index: 100;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+`
+
 class App extends Component {
   render() {
     return (
@@ -45,6 +59,7 @@ class App extends Component {
         <Features/>
         <ScCircleTop/>
         <ScCircleBottom/>
+        <ScSmall>Developed in Iceland</ScSmall>
       </ScApp>
     );
   }
