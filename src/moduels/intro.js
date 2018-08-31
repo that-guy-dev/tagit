@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { fadeTop, fadeBottom, opacity, fadeRight } from '../utility/animation';
 import App from '../assets/app.png';
 
 const ScIntroWrapper = styled.div`
@@ -30,17 +31,34 @@ const ScHeadline = styled.h1`
   font-weight: 900;
   line-height: 60px;
   color: white;
+  opacity: 0;
+  animation: ${fadeBottom} 1s ease-in-out;
+  animation-fill-mode: forwards;
 `
 
 const ScMessage = styled.p`  
-font-size: 1.2em;
+  font-size: 1.2em;
+  font-weight: 100;
+  line-height: 30px;
+  color: white;
+  opacity: 0;
+  animation: ${fadeBottom} 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s; 
+`
+
+const ScMessageEmail = styled.p`  
+  font-size: 1.2em;
   font-weight: 100;
   line-height: 30px;
   color: white;
 `
 
 const ScEmailSection = styled.div`  
-
+  opacity: 0;
+  animation: ${fadeBottom} 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
 `
 
 const ScEmail = styled.div`  
@@ -87,6 +105,10 @@ const ScImg = styled.div`
     margin-left: 52px;    
     position: relative;
     left: 30px;
+    opacity: 0;
+    animation: ${fadeRight} 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
 `
 
 const Intro = () => {
@@ -101,7 +123,7 @@ const Intro = () => {
         </ScItem>    
         <ScItem>
           <ScEmailSection>
-            <ScMessage>Get notified when we launch</ScMessage>
+            <ScMessageEmail >Get notified when we launch</ScMessageEmail>
             <ScEmail>
                 <ScInput placeholder="Email..."/>
                 <ScButton>Submit</ScButton>
