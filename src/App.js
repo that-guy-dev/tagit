@@ -7,7 +7,7 @@ import Features from './moduels/features';
 
 const ScApp = styled.div`
   background-image: linear-gradient(#6955E2, #28A6C8);
-  background-size: 300px 300vh;
+  background-size: 300px 600vh;
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
