@@ -79,13 +79,24 @@ font-size: 1.2em;
   line-height: 30px;
   color: white;
   text-align: center;
+  margin: 0px;
 `
 
 const ScEmailSection = styled.div`  
-  width: 600px;
   margin: auto;
   position: relative;
   bottom: 200px;
+  background: rgb(64, 53, 156);
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 0 19%;
+  box-sizing: border-box;
+  align-content: center;
+  height: 230px;
+  border-radius: 10px;
+
   @media (max-width: 1000px) {
     bottom: 0;
   }
@@ -116,7 +127,7 @@ const ScInput = styled.input`
 `
 
 const ScButton = styled.div`  
-  background: #40359C;
+  background: rgb(41, 195, 198);
   color: #fff;
   height: 50px;
   width: 40%;
