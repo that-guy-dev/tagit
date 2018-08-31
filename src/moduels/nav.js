@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { LogoW } from '../assets/icon';
@@ -20,11 +20,6 @@ const ScNavWrapper = styled.div`
 const ScNavItemWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-`
-const ScNavItem= styled.a`
-  margin-left: 100px;
-  color: white;
-  text-decoration: none;
 `
 
 const Nav = () => {

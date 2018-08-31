@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled, { css } from 'styled-components';
-import { Save, Organize, Reminder, Offline } from '../assets/icon';
+import { Save, Organize, Reminder, Highlight, Share, Recommended, Central, Offline } from '../assets/icon';
 
 const ScWhy = styled.div`
   z-index: 100;
@@ -18,6 +18,13 @@ const ScFeature = styled.div`
   ${props => props.right && css`
     justify-content: flex-end;
   `}
+  ${props => props.pos && css`
+    position: relative;
+    bottom: ${props.pos}px;
+  `}
+  @media (max-width: 1000px) {
+    bottom: 0;
+  }
 `
 
 const ScFeatureHeadline = styled.h1`
@@ -79,7 +86,7 @@ const Features = (props) => {
         </ScFeatureItemWrapper>
       </ScFeature>
 
-      <ScFeature right>
+      <ScFeature right pos="50">
         <ScFeatureItemWrapper>
           <ScFeatureItem>
             <Organize/>
@@ -89,7 +96,7 @@ const Features = (props) => {
         </ScFeatureItemWrapper>
       </ScFeature>
 
-          <ScFeature left>
+      <ScFeature left pos="150">
         <ScFeatureItemWrapper>
           <ScFeatureItem>
             <Reminder/>
@@ -99,7 +106,47 @@ const Features = (props) => {
         </ScFeatureItemWrapper>
       </ScFeature>
 
-      <ScFeature right>
+      <ScFeature right pos="200">
+        <ScFeatureItemWrapper>
+          <ScFeatureItem>
+            <Highlight/>
+            <ScSubHeader>Highlight</ScSubHeader>
+          </ScFeatureItem>
+          <ScP>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</ScP>
+        </ScFeatureItemWrapper>
+      </ScFeature>
+
+          <ScFeature left pos="250">
+        <ScFeatureItemWrapper>
+          <ScFeatureItem>
+            <Share/>
+            <ScSubHeader>Share</ScSubHeader>
+          </ScFeatureItem>
+          <ScP>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</ScP>
+        </ScFeatureItemWrapper>
+      </ScFeature>
+
+      <ScFeature right pos="300">
+        <ScFeatureItemWrapper>
+          <ScFeatureItem>
+            <Recommended/>
+            <ScSubHeader>Recommandation</ScSubHeader>
+          </ScFeatureItem>
+          <ScP>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</ScP>
+        </ScFeatureItemWrapper>
+      </ScFeature>
+
+      <ScFeature left pos="350">
+        <ScFeatureItemWrapper>
+          <ScFeatureItem>
+            <Central/>
+            <ScSubHeader>Centralized</ScSubHeader>
+          </ScFeatureItem>
+          <ScP>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</ScP>
+        </ScFeatureItemWrapper>
+      </ScFeature>
+
+      <ScFeature right pos="400">
         <ScFeatureItemWrapper>
           <ScFeatureItem>
             <Offline/>

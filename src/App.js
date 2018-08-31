@@ -14,11 +14,6 @@ const ScApp = styled.div`
   padding-bottom: 500px;
 `
 
-const ScMainWrapper = styled.div`
-  position:relative;
-  z-index: 10;
-  display: flex;
-`
 const ScCircleTop = styled.div`
   width: 1500px;
   height: 1500px;
