@@ -206,7 +206,7 @@ const Features = (props) => {
         </ScFeatureItemWrapper>
       </ScFeature>
 
-         <ScFeature left pos="300">
+         <ScFeature left pos="350">
         <ScFeatureItemWrapper>
           <ScFeatureItem>
             <Collab/>
@@ -216,7 +216,7 @@ const Features = (props) => {
         </ScFeatureItemWrapper>
       </ScFeature>
 
-      <ScFeature right pos="350">
+      <ScFeature right pos="400">
         <ScFeatureItemWrapper>
           <ScFeatureItem>
             <Central/>
@@ -226,7 +226,7 @@ const Features = (props) => {
         </ScFeatureItemWrapper>
       </ScFeature>
 
-      <ScFeature left pos="400">
+      <ScFeature left pos="450">
         <ScFeatureItemWrapper>
           <ScFeatureItem>
             <Offline/>
