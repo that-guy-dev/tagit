@@ -74,8 +74,8 @@ const ScP = styled.p`
 
 
 const ScMessage = styled.p`  
-font-size: 2.5em;
-  font-weight: 900;
+font-size: 1.7em;
+  font-weight: 100;
   line-height: 30px;
   color: white;
   text-align: center;
