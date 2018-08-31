@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Save, Organize, Reminder, Highlight, Share, Recommended, Central, Offline } from '../assets/icon';
+import { Save, Organize, Reminder, Highlight, Share, Recommended, Central, Collab, Offline } from '../assets/icon';
 import App from '../assets/app.png';
 
 const ScWhy = styled.div`
@@ -86,6 +86,9 @@ const ScEmailSection = styled.div`
   margin: auto;
   position: relative;
   bottom: 200px;
+  @media (max-width: 1000px) {
+    bottom: 0;
+  }
 `
 
 const ScEmail = styled.div`  
@@ -203,7 +206,17 @@ const Features = (props) => {
         </ScFeatureItemWrapper>
       </ScFeature>
 
-      <ScFeature left pos="350">
+         <ScFeature left pos="300">
+        <ScFeatureItemWrapper>
+          <ScFeatureItem>
+            <Collab/>
+            <ScSubHeader>Collaborate</ScSubHeader>
+          </ScFeatureItem>
+          <ScP>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</ScP>
+        </ScFeatureItemWrapper>
+      </ScFeature>
+
+      <ScFeature right pos="350">
         <ScFeatureItemWrapper>
           <ScFeatureItem>
             <Central/>
@@ -213,7 +226,7 @@ const Features = (props) => {
         </ScFeatureItemWrapper>
       </ScFeature>
 
-      <ScFeature right pos="400">
+      <ScFeature left pos="400">
         <ScFeatureItemWrapper>
           <ScFeatureItem>
             <Offline/>
