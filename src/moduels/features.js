@@ -74,8 +74,8 @@ const ScP = styled.p`
 
 
 const ScMessage = styled.p`  
-font-size: 1.2em;
-  font-weight: 100;
+font-size: 2.5em;
+  font-weight: 900;
   line-height: 30px;
   color: white;
   text-align: center;
@@ -89,12 +89,12 @@ const ScEmailSection = styled.div`
   background: rgb(64, 53, 156);
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: column;
   padding: 0 19%;
   box-sizing: border-box;
   align-content: center;
-  height: 230px;
+  height: 300px;
   border-radius: 10px;
 
   @media (max-width: 1000px) {
@@ -105,6 +105,7 @@ const ScEmailSection = styled.div`
 const ScEmail = styled.div`  
   display: flex;
   justify-content: space-between;
+  margin-top: 45px;
 `
 
 const ScInput = styled.input`  
