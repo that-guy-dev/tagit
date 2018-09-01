@@ -93,10 +93,10 @@ const ScEmailSection = styled.div`
   padding: 0 19%;
   box-sizing: border-box;
   align-content: center;
-  height: 300px;
-  border-radius: 10px;
+  /* height: 300px; */
+  /* border-radius: 10px;
   background: rgb(40, 166, 200);
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 11px 27px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 11px 27px; */
   @media (max-width: 1000px) {
     bottom: 0;
   }
