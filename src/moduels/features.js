@@ -1,7 +1,11 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import Fade from 'react-reveal/Fade';
+
 import { Save, Organize, Reminder, Highlight, Share, Recommended, Central, Collab, Offline } from '../assets/icon';
 import App from '../assets/app.png';
+import { fadeTop, fadeBottom, opacity, fadeRight } from '../utility/animation';
+
 
 const ScWhy = styled.div`
   z-index: 100;
@@ -34,7 +38,10 @@ const ScFeatureHeadline = styled.h1`
   line-height: 60px;
   color: #fff;
   margin-bottom: 50px;
-`
+  opacity: 0;
+  animation: ${fadeTop} 1s ease-in-out;
+  animation-fill-mode: forwards;
+  `
 
 const ScFeatureItemWrapper = styled.div`
   width: calc(100vw/2.8);
@@ -159,36 +166,43 @@ const Features = (props) => {
       <ScFeatureHeadline>Features</ScFeatureHeadline>
       
       <ScFeature left>
-        <ScFeatureItemWrapper>
-          <ScFeatureItem>
-            <Save/>
-            <ScSubHeader>Save and view later</ScSubHeader>
-          </ScFeatureItem>
-          <ScP>With so much content on the internet and so little time, tagit can be your best friend in saving and then viewing content whenever you want at the right time for you.</ScP>
-        </ScFeatureItemWrapper>
+        <Fade bottom>
+          <ScFeatureItemWrapper>
+            <ScFeatureItem>
+              <Save/>
+              <ScSubHeader>Save and view later</ScSubHeader>
+            </ScFeatureItem>
+            <ScP>With so much content on the internet and so little time, tagit can be your best friend in saving and then viewing content whenever you want at the right time for you.</ScP>
+          </ScFeatureItemWrapper>
+        </Fade>
       </ScFeature>
 
       <ScFeature right pos="50">
-        <ScFeatureItemWrapper>
-          <ScFeatureItem>
-            <Organize/>
-            <ScSubHeader>Organize</ScSubHeader>
-          </ScFeatureItem>
-          <ScP>We offer a very powerful tag system that helps you categorize and organize content for easy access later, no more lost articles that you wanted to read.</ScP>
-        </ScFeatureItemWrapper>
+        <Fade bottom>
+          <ScFeatureItemWrapper>
+            <ScFeatureItem>
+              <Organize/>
+              <ScSubHeader>Organize</ScSubHeader>
+            </ScFeatureItem>
+            <ScP>We offer a very powerful tag system that helps you categorize and organize content for easy access later, no more lost articles that you wanted to read.</ScP>
+          </ScFeatureItemWrapper>
+        </Fade>
       </ScFeature>
 
       <ScFeature left pos="150">
-        <ScFeatureItemWrapper>
-          <ScFeatureItem>
-            <Reminder/>
-            <ScSubHeader>Reminders</ScSubHeader>
-          </ScFeatureItem>
-          <ScP>We all sometimes need a reminder. When you tag content we offer you the possibility to get a reminder for that piece of content, yes please next saturday would be great. </ScP>
-        </ScFeatureItemWrapper>
+          <Fade bottom>
+          <ScFeatureItemWrapper>
+            <ScFeatureItem>
+              <Reminder/>
+              <ScSubHeader>Reminders</ScSubHeader>
+            </ScFeatureItem>
+            <ScP>We all sometimes need a reminder. When you tag content we offer you the possibility to get a reminder for that piece of content, yes please next saturday would be great. </ScP>
+          </ScFeatureItemWrapper>
+        </Fade>
       </ScFeature>
 
       <ScFeature right pos="200">
+      <Fade bottom>
         <ScFeatureItemWrapper>
           <ScFeatureItem>
             <Highlight/>
@@ -197,6 +211,7 @@ const Features = (props) => {
           <ScP>Remeber that good old highlight marker. This is the same. You can highlight parts of articles for fast access.</ScP>
           {/* <ScP>Not all content is great, somtimes there is a bit here and there you want to highlight for fast access.</ScP> */}
         </ScFeatureItemWrapper>
+        </Fade>
       </ScFeature>
 
           {/* <ScFeature left pos="250">
@@ -210,6 +225,7 @@ const Features = (props) => {
       </ScFeature> */}
 
       <ScFeature left pos="250">
+      <Fade bottom>
         <ScFeatureItemWrapper>
           <ScFeatureItem>
             <Recommended/>
@@ -217,9 +233,11 @@ const Features = (props) => {
           </ScFeatureItem>
           <ScP>We analyze what you tag and give you recommendation on more articles to read based on your interests.</ScP>
         </ScFeatureItemWrapper>
+        </Fade>
       </ScFeature>
 
          <ScFeature right pos="300">
+         <Fade bottom>
         <ScFeatureItemWrapper>
           <ScFeatureItem>
             <Collab/>
@@ -227,9 +245,11 @@ const Features = (props) => {
           </ScFeatureItem>
           <ScP>Share with other users and discover new content together. Create a tag directory for common interests or let others follow your discoveries.</ScP>
         </ScFeatureItemWrapper>
+        </Fade>
       </ScFeature>
 
       <ScFeature left pos="350">
+      <Fade bottom>
         <ScFeatureItemWrapper>
           <ScFeatureItem>
             <Central/>
@@ -237,9 +257,11 @@ const Features = (props) => {
           </ScFeatureItem>
           <ScP>All of your findings and discoveries will be accessible on every device.</ScP>
         </ScFeatureItemWrapper>
+        </Fade>
       </ScFeature>
 
       <ScFeature right pos="400">
+      <Fade bottom>
         <ScFeatureItemWrapper>
           <ScFeatureItem>
             <Offline/>
@@ -247,14 +269,17 @@ const Features = (props) => {
           </ScFeatureItem>
           <ScP>Everything you tag will be save and secure for as long as you please. When there is no signal, you can be sure that all of your content will still be accessible.</ScP>
         </ScFeatureItemWrapper>
+        </Fade>
       </ScFeature>
 
         <ScEmailSection >
+          <Fade bottom>
           <ScMessage>Get notified when we launch</ScMessage>
           <ScEmail>
               <ScInput placeholder="Email..."/>
               <ScButton>Submit</ScButton>
           </ScEmail>
+          </Fade>
         </ScEmailSection>
 
     </ScWhy>
