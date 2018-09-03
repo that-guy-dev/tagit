@@ -225,7 +225,7 @@ const Features = (props) => {
             <Collab/>
             <ScSubHeader>Collaborate</ScSubHeader>
           </ScFeatureItem>
-          <ScP>Share with other users and discover new content together. Create a tag directory for common interest or let others follow your discoveries</ScP>
+          <ScP>Share with other users and discover new content together. Create a tag directory for common interests or let others follow your discoveries.</ScP>
         </ScFeatureItemWrapper>
       </ScFeature>
 
