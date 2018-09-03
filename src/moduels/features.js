@@ -74,7 +74,7 @@ const ScSubHeader = styled.h3`
 `
 
 const ScP = styled.p`
-  padding: 15px 30px 20px 30px;
+  padding: 15px 30px 30px 30px;
   line-height: 26px;
   font-size: 1.1em;
 `
@@ -208,7 +208,7 @@ const Features = (props) => {
             <Highlight/>
             <ScSubHeader>Highlight</ScSubHeader>
           </ScFeatureItem>
-          <ScP>Remeber that good old highlight marker. This is the same. You can highlight parts of articles for fast access.</ScP>
+          <ScP>Remember that good old highlight marker. This is the same. You can highlight parts of articles for fast access.</ScP>
           {/* <ScP>Not all content is great, somtimes there is a bit here and there you want to highlight for fast access.</ScP> */}
         </ScFeatureItemWrapper>
         </Fade>
