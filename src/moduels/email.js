@@ -58,7 +58,7 @@ class Email extends Component {
   signUp = () => {    
     console.log('cliced'); 
     axios.post('http://localhost:3034/postUrl', {
-      email: "laruslarus@gmail.com"
+      email: "bjornlarus@gmail.com"
     })
   }
  
