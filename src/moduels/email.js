@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
+import axios from 'axios';
 import { fadeTop, fadeBottom, opacity, fadeRight } from '../utility/animation';
 
 const ScMessageEmail = styled.p`  
@@ -52,17 +53,24 @@ const ScButton = styled.div`
   cursor: pointer;
 `
 
+class Email extends Component {
 
-
-const Email = (props) => {
+  signUp = () => {    
+    console.log('cliced'); 
+    axios.post('http://localhost:3034/postUrl', {
+      email: "laruslarus@gmail.com"
+    })
+  }
+ 
+render() {
 return (
   <ScEmailSection>
     <ScMessageEmail >Get notified when we launch</ScMessageEmail>
-    <ScEmail>
-        <ScInput placeholder="Email..."/>
-        <ScButton>Submit</ScButton>
-    </ScEmail>
-  </ScEmailSection>
-);
+      <ScEmail>
+          <ScInput placeholder="Email..."/>
+          <ScButton onClick={this.signUp}>Submit</ScButton>
+      </ScEmail>
+    </ScEmailSection>)
+  }
 }
 export default Email;
