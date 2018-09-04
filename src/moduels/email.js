@@ -57,7 +57,7 @@ class Email extends Component {
 
   signUp = () => {    
     console.log('cliced'); 
-    axios.post('https://mystifying-shirley-c4857c.netlify.com/postUrl', {
+    axios.post('https://mystifying-shirley-c4857c.netlify.com/signUp', {
       email: "bjornlarus@gmail.com"
     })
   }
