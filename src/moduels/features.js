@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Fade from 'react-reveal/Fade';
+import Email from './email';
 
 import { Save, Organize, Reminder, Highlight, Share, Recommended, Central, Collab, Offline } from '../assets/icon';
 import App from '../assets/app.png';
@@ -79,16 +80,6 @@ const ScP = styled.p`
   font-size: 1.1em;
 `
 
-
-const ScMessage = styled.p`  
-font-size: 1.7em;
-  font-weight: 100;
-  line-height: 30px;
-  color: white;
-  text-align: center;
-  margin: 0px;
-`
-
 const ScEmailSection = styled.div`  
   margin: auto;
   position: relative;
@@ -107,53 +98,6 @@ const ScEmailSection = styled.div`
   @media (max-width: 1000px) {
     bottom: 0;
   }
-`
-
-const ScEmail = styled.div`  
-  display: flex;
-  justify-content: space-between;
-  margin-top: 45px;
-`
-
-const ScInput = styled.input`  
-  background: #fff;
-  color: #40359C;
-  height: 47px;
-  width: 55%;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  padding-left: 10px;
-  font-size: 1em;
-  &::placeholder {
-    color: #40359C;
-    opacity: 0.5;
-  }
-`
-
-const ScButton = styled.div`  
-  background: rgb(64, 53, 156);
-  color: #fff;
-  height: 50px;
-  width: 40%;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  cursor: pointer;
-`
-
-const ScImg = styled.div`
-    background: url( ${App} ) no-repeat;
-    transform: rotate(3deg);
-    width: 2070px;
-    height: 980px;
-    margin-left: 52px;    
-    position: relative;
-    left: 30px;
 `
 
 const ScItem = styled.div`
@@ -274,11 +218,7 @@ const Features = (props) => {
 
         <ScEmailSection >
           <Fade bottom>
-          <ScMessage>Get notified when we launch</ScMessage>
-          <ScEmail>
-              <ScInput placeholder="Email..."/>
-              <ScButton>Submit</ScButton>
-          </ScEmail>
+            <Email/>
           </Fade>
         </ScEmailSection>
 
