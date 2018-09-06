@@ -58,7 +58,7 @@ class Email extends Component {
   signUp = () => {    
     console.log('cliced'); 
     axios.post('https://serene-temple-47039.herokuapp.com/posturl', {
-      email: "bjornlarus@gmail.com"
+      email: "bjorn@myshopover.com"
     })
   }
  
