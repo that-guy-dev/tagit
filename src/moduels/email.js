@@ -55,9 +55,8 @@ const ScButton = styled.div`
 
 class Email extends Component {
 
-  signUp = () => {    
-    console.log('cliced');    
-    axios.post('https://serene-temple-47039.herokuapp.com/posturl', 
+  signUp = () => {        
+    axios.post('https://determined-kilby-67f463.netlify.com/posturl', 
       {
         email: "bjorn@myshopover.com"
       }
