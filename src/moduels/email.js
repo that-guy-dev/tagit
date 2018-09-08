@@ -58,7 +58,7 @@ class Email extends Component {
   signUp = () => {        
     axios.post('https://tagit-email.herokuapp.com/postUrl', 
       {
-        email: "bjorn@myshopover.com"
+        email: "laruslarus@gmail.com"
       }
     )
   }
