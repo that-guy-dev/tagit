@@ -3,9 +3,8 @@ import styled, { css } from 'styled-components';
 import Fade from 'react-reveal/Fade';
 import Email from './email';
 
-import { Save, Organize, Reminder, Highlight, Share, Recommended, Central, Collab, Offline } from '../assets/icon';
-import App from '../assets/app.png';
-import { fadeTop, fadeBottom, opacity, fadeRight } from '../utility/animation';
+import { Save, Organize, Reminder, Highlight, Recommended, Central, Collab, Offline } from '../assets/icon';
+import { fadeTop, } from '../utility/animation';
 
 
 const ScWhy = styled.div`
@@ -99,10 +98,6 @@ const ScEmailSection = styled.div`
     bottom: 0;
   }
 `
-
-const ScItem = styled.div`
-`
-
 
 const Features = (props) => {
   return (

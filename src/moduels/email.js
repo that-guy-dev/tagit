@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import { fadeTop, fadeBottom, opacity, fadeRight } from '../utility/animation';
+import { fadeBottom, } from '../utility/animation';
 
 const ScMessageEmail = styled.p`  
   font-size: 1.2em;
@@ -56,8 +56,7 @@ const ScButton = styled.div`
 class Email extends Component {
 
   signUp = () => {        
-    axios.post('https://determined-kilby-67f463.netlify.com/posturl', 
-      {
+    axios.post('https://serene-temple-47039.herokuapp.com/posturl', {      
         email: "bjorn@myshopover.com"
       }
     )

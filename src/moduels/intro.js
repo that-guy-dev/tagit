@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { fadeTop, fadeBottom, opacity, fadeRight } from '../utility/animation';
+import { fadeBottom, fadeRight } from '../utility/animation';
 import App from '../assets/app.png';
 import Email from './email';
 
