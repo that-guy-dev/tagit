@@ -55,6 +55,17 @@ const ScButton = styled.div`
 
 class Email extends Component {
   signUp = () => {        
+      axios.post('https://tagitemail.herokuapp.com/postUrl', {
+        email: "laruslarus@gmail.com"       
+      })
+      .then((response) => {
+        console.log(response);                 
+      })
+      .catch((error) => {
+        console.log(error);                       
+      });
+    
+
     axios.post('https://tagitemail.herokuapp.com/postUrl', 
       {
         email: "laruslarus@gmail.com"
