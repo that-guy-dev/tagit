@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import { fadeBottom, } from '../utility/animation';
+import { fadeBottom } from '../utility/animation';
 
 const ScMessageEmail = styled.p`  
   font-size: 1.2em;
@@ -54,34 +54,31 @@ const ScButton = styled.div`
 `
 
 class Email extends Component {
-  signUp = () => {        
-      axios.post('https://tagitemail.herokuapp.com/postUrl', {
-        email: "laruslarus@gmail.com"       
-      })
-      .then((response) => {
-        console.log(response);                 
-      })
-      .catch((error) => {
-        console.log(error);                       
-      });
-    
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: ''
+    };
+  } 
 
-    axios.post('https://tagitemail.herokuapp.com/postUrl', 
-      {
-        email: "laruslarus@gmail.com"
-      }
-    )
+  signUp = () => {    
+    //axios.post('http://localhost:3034/postUrl', {
+    axios.post('https://tagitemail.herokuapp.com/postUrl', {
+      email: "blfdasfsdfsurbp@gmail.com"
+    })
   }
- 
+
+  
 render() {
-return (
-  <ScEmailSection>
-    <ScMessageEmail >Get notified when we launch</ScMessageEmail>
-      <ScEmail>
-          <ScInput placeholder="Email..."/>
-          <ScButton onClick={this.signUp}>Submit</ScButton>
-      </ScEmail>
-    </ScEmailSection>)
+  return (
+    <ScEmailSection>
+      <ScMessageEmail >Get notified when we launch</ScMessageEmail>
+        <ScEmail>
+            <ScInput placeholder="Email..."/>
+            <ScButton onClick={this.signUp}>Submit</ScButton>
+        </ScEmail>
+      </ScEmailSection>
+    )
   }
 }
 export default Email;
