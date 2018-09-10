@@ -59,22 +59,27 @@ class Email extends Component {
     this.state = {
       email: ''
     };
+    this.signUp = this.signUp.bind(this);
+    this.handleEmail = this.handleEmail.bind(this)
   } 
 
   signUp = () => {    
     //axios.post('http://localhost:3034/postUrl', {
     axios.post('https://tagitemail.herokuapp.com/postUrl', {
-      email: "blfdasfsdfsurbp@gmail.com"
+      email: this.state.email
     })
   }
-
+  handleEmail(e) {
+    this.setState({email: e.target.value});
+  }
+  
   
 render() {
   return (
     <ScEmailSection>
       <ScMessageEmail >Get notified when we launch</ScMessageEmail>
         <ScEmail>
-            <ScInput placeholder="Email..."/>
+            <ScInput placeholder="Email..." onChange={this.handleEmail}/>
             <ScButton onClick={this.signUp}>Submit</ScButton>
         </ScEmail>
       </ScEmailSection>
