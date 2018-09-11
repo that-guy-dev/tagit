@@ -39,6 +39,9 @@ const ScInput = styled.input`
     color: #40359C;
     opacity: 0.5;
   }
+&:hover {
+    cursor: text;
+}
 `
 
 const ScButton = styled.div`  
