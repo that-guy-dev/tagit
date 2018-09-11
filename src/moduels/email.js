@@ -30,7 +30,7 @@ const ScInput = styled.input`
   display:flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
   padding-left: 10px;
@@ -39,9 +39,9 @@ const ScInput = styled.input`
     color: #40359C;
     opacity: 0.5;
   }
-&:hover {
-    cursor: text;
-}
+  &:hover {
+      cursor: text;
+  }
 `
 
 const ScButton = styled.div`  
@@ -52,8 +52,11 @@ const ScButton = styled.div`
   display:flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
+  &:hover {
+      background: hsl(181, 66%, 47%);
+  }
 `
 
 class Email extends Component {
