@@ -14,6 +14,10 @@ const ScIntroWrapper = styled.div`
   @media (min-width: 2150px) {
     padding: 0 0 0 25%;
   }
+  @media (max-width: 760px) {
+    flex-direction: column;
+    padding: 0 10%;
+  }
 `
 const ScText = styled.div`
   display: flex;
@@ -48,17 +52,21 @@ const ScMessage = styled.p`
   animation-delay: 0.2s; 
 `
 const ScImg = styled.div`
-    background: url( ${App} ) no-repeat;
-    transform: rotate(3deg);
-    width: 2070px;
-    height: 980px;
-    margin-left: 52px;    
-    position: relative;
-    left: 30px;
-    opacity: 0;
-    animation: ${fadeRight} 1s ease-in-out;
-    animation-fill-mode: forwards;
-    animation-delay: 0.5s;
+  background: url( ${App} ) no-repeat;
+  transform: rotate(3deg);
+  width: 2070px;
+  height: 980px;
+  margin-left: 52px;    
+  position: relative;
+  left: 30px;
+  opacity: 0;
+  animation: ${fadeRight} 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  @media (max-width: 760px) {
+    left: -30px;
+    top: 100px;
+  }
 `
 
 const Intro = () => {
