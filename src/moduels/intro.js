@@ -26,6 +26,9 @@ const ScText = styled.div`
   @media (min-width: 2750px) {
     width: 40%;
   }
+  @media (max-width: 760px) {
+    margin-bottom: 20px;
+  }
 `
 
 const ScItem = styled.div`
@@ -66,6 +69,7 @@ const ScImg = styled.div`
   @media (max-width: 760px) {
     left: -30px;
     top: 100px;
+    margin-bottom: 20px;
   }
 `
 
