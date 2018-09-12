@@ -17,6 +17,7 @@ const ScWhy = styled.div`
 `
 const ScFeature = styled.div`
   display: flex;
+  
   ${props => props.left && css`
     justify-content: flex-start;
   `}
@@ -96,6 +97,9 @@ const ScEmailSection = styled.div`
   box-shadow: rgba(0, 0, 0, 0.25) 0px 11px 27px; */
   @media (max-width: 1000px) {
     bottom: 0;
+  }
+  @media (max-width: 1000px) {
+    padding: 0;
   }
 `
 
@@ -194,7 +198,7 @@ const Features = (props) => {
             <Central/>
             <ScSubHeader>Centralized</ScSubHeader>
           </ScFeatureItem>
-          <ScP>All of your findings and discoveries will be accessible on every device.</ScP>
+          <ScP>All of your findings and discoveries will be accessible on every device. You just pick the right tool and all your data will be there.</ScP>
         </ScFeatureItemWrapper>
         </Fade>
       </ScFeature>
@@ -211,7 +215,7 @@ const Features = (props) => {
         </Fade>
       </ScFeature>
 
-        <ScEmailSection >
+        <ScEmailSection bottom>
           <Fade bottom>
             <Email/>
           </Fade>

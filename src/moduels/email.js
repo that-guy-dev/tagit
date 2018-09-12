@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import { fadeBottom } from '../utility/animation';
+import { fadeBottom, change } from '../utility/animation';
 
 const ScMessageEmail = styled.p`  
   font-size: 1.2em;
@@ -55,7 +55,9 @@ const ScButton = styled.div`
   border-radius: 5px;
   cursor: pointer;
   &:hover {
-      background: hsl(181, 66%, 47%);
+    animation: ${change} .3s linear;
+    animation-fill-mode: forwards;
+    background: hsl(181, 66%, 47%);
   }
 `
 

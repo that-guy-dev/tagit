@@ -72,6 +72,15 @@ export const opacity = keyframes`
   }
 `;
 
+export const change = keyframes`
+  from {
+    background: #40359C;
+  }
+  to {
+    background: hsl(181, 66%, 47%);
+  }
+`;
+
 export const shake = keyframes`
   10%, 90% {
     transform: translate3d(-1px, 0, 0);
