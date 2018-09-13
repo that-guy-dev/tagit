@@ -22,7 +22,7 @@ const ScIntroWrapper = styled.div`
 const ScText = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   @media (min-width: 2750px) {
     width: 40%;
   }
@@ -32,12 +32,14 @@ const ScText = styled.div`
 `
 
 const ScItem = styled.div`
+
 `
 
 const ScHeadline = styled.h1`
   font-size: 3.5em;
   font-weight: 900;
   line-height: 60px;
+  margin-bottom: 200px;
   color: white;
   opacity: 0;
   animation: ${fadeBottom} 1s ease-in-out;
