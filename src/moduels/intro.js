@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { fadeBottom, fadeRight } from '../utility/animation';
 import App from '../assets/app.png';
@@ -32,7 +32,9 @@ const ScText = styled.div`
 `
 
 const ScItem = styled.div`
-
+  ${props => props.top && css`
+    margin-bottom: 100px;    
+  `}  
 `
 
 const ScHeadline = styled.h1`
@@ -78,7 +80,7 @@ const Intro = () => {
   return (
     <ScIntroWrapper>      
       <ScText>
-        <ScItem>
+        <ScItem top>
           <ScHeadline>
             Save anything and view it  when you want
           </ScHeadline>
