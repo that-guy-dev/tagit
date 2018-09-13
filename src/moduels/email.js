@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import axios from 'axios';
+import Loader from '../utility/loader';
 import { fadeBottom, change } from '../utility/animation';
 
 const ScMessageEmail = styled.p`  
@@ -61,21 +62,52 @@ const ScButton = styled.div`
   }
 `
 
+const ScSpan = styled.div`  
+  color: #fff;
+  margin-top: 25px;
+  font-size: 1.2em;
+  display: none;
+  ${props => props.no && css`
+    display: block;
+  `}
+  ${props => props.yes && css`
+    display: block;
+  `}
+  
+`
+
 class Email extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: ''
+      email: '',
+      spinner: false,
+      success: false,
+      error: false
     };
     this.signUp = this.signUp.bind(this);
     this.handleEmail = this.handleEmail.bind(this)
   } 
 
   signUp = () => {    
+    this.setState({ spinner: true});
+    this.setState({ success: false});
+    this.setState({ error: false});
+
     //axios.post('http://localhost:3034/postUrl', {
     axios.post('https://tagitemail.herokuapp.com/postUrl', {
       email: this.state.email
     })
+    .then((response) => {
+      this.setState({spinner: false});  
+      this.setState({success: true});      
+    })
+    .catch((error) => {
+      this.setState({spinner: false}); 
+      this.setState({error: true});
+      console.log(error);    
+      
+    });
   }
   handleEmail(e) {
     this.setState({email: e.target.value});
@@ -88,8 +120,13 @@ render() {
       <ScMessageEmail >Get notified when we launch</ScMessageEmail>
         <ScEmail>
             <ScInput placeholder="Email..." onChange={this.handleEmail}/>
-            <ScButton onClick={this.signUp}>Submit</ScButton>
+            {this.state.spinner
+              ? <ScButton onClick={this.signUp}><Loader/></ScButton>
+              : <ScButton onClick={this.signUp}>Submit</ScButton>
+            }           
         </ScEmail>
+        {this.state.success && <ScSpan yes>Welcome to the family, we will keep you updated</ScSpan>}
+        {this.state.error && <ScSpan no>Ups, something went wrong :(</ScSpan>}
       </ScEmailSection>
     )
   }

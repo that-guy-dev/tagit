@@ -108,3 +108,30 @@ export const height = keyframes`
 
   }
 `;
+
+export const loader_one = keyframes`
+    0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
+
+export const loader_two = keyframes`
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(19px, 0);
+  }
+`;
+
+export const loader_three = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+`;
