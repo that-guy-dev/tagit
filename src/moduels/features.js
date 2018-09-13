@@ -10,7 +10,7 @@ import { fadeTop, } from '../utility/animation';
 const ScWhy = styled.div`
   z-index: 100;
   position: relative;
-  padding: 60px 10%;
+  padding: 0 10%;
   @media (min-width: 2150px) {
     padding: 60px 25%;
   }
