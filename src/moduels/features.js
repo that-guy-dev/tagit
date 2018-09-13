@@ -12,7 +12,7 @@ const ScWhy = styled.div`
   position: relative;
   padding: 0 10%;
   @media (min-width: 2150px) {
-    padding: 60px 25%;
+    padding: 0 25%;
   }
 `
 const ScFeature = styled.div`
