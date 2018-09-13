@@ -21,6 +21,9 @@ const ScEmailSection = styled.div`
 const ScEmail = styled.div`  
   display: flex;
   justify-content: space-between;
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
 `
 
 const ScInput = styled.input`  
@@ -43,6 +46,10 @@ const ScInput = styled.input`
   &:hover {
       cursor: text;
   }
+  @media (max-width: 700px) {
+    width: 96%;
+    padding-left: 4%;
+  }
 `
 
 const ScButton = styled.div`  
@@ -59,6 +66,10 @@ const ScButton = styled.div`
     animation: ${change} .3s linear;
     animation-fill-mode: forwards;
     background: hsl(181, 66%, 47%);
+  }
+  @media (max-width: 700px) {
+    margin-top: 20px;
+    width: 100%;
   }
 `
 
@@ -83,31 +94,41 @@ class Email extends Component {
       email: '',
       spinner: false,
       success: false,
-      error: false
+      error: false,
     };
     this.signUp = this.signUp.bind(this);
     this.handleEmail = this.handleEmail.bind(this)
   } 
 
-  signUp = () => {    
+  signUp = (e) => {    
     this.setState({ spinner: true});
     this.setState({ success: false});
-    this.setState({ error: false});
+    this.setState({ error: false});  
+    this.setState({ valid: false});  
 
-    //axios.post('http://localhost:3034/postUrl', {
-    axios.post('https://tagitemail.herokuapp.com/postUrl', {
-      email: this.state.email
-    })
-    .then((response) => {
-      this.setState({spinner: false});  
-      this.setState({success: true});      
-    })
-    .catch((error) => {
-      this.setState({spinner: false}); 
-      this.setState({error: true});
-      console.log(error);    
-      
-    });
+    e.preventDefault(); 
+    let eReg = (/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+    if(this.state.email === "" || !eReg.exec(this.state.email)) {
+      this.setState({spinner: false})   
+      {this.state.valid && <ScSpan no>Email not valid 🙄 </ScSpan>}  
+      return;
+    }
+    else {
+      //axios.post('http://localhost:3034/postUrl', {
+      axios.post('https://tagitemail.herokuapp.com/postUrl', {
+        email: this.state.email
+      })
+      .then((response) => {
+        this.setState({spinner: false});  
+        this.setState({success: true});      
+      })
+      .catch((error) => {
+        this.setState({spinner: false}); 
+        this.setState({error: true});
+        console.log(error);    
+        
+      });
+    }
   }
   handleEmail(e) {
     this.setState({email: e.target.value});
@@ -125,8 +146,8 @@ render() {
               : <ScButton onClick={this.signUp}>Submit</ScButton>
             }           
         </ScEmail>
-        {this.state.success && <ScSpan yes>Welcome to the family, we will keep you updated</ScSpan>}
-        {this.state.error && <ScSpan no>Ups, something went wrong :(</ScSpan>}
+        {this.state.success && <ScSpan yes>Welcome to the family, we will keep you updated 👏</ScSpan>}
+        {this.state.error && <ScSpan no>Oops, something went wrong 😖</ScSpan>}
       </ScEmailSection>
     )
   }
