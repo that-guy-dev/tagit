@@ -21,7 +21,7 @@ const ScEmailSection = styled.div`
 const ScEmail = styled.div`  
   display: flex;
   justify-content: space-between;
-  @media (max-width: 700px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
   }
 `
@@ -46,7 +46,7 @@ const ScInput = styled.input`
   &:hover {
       cursor: text;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 1000px) {
     width: 96%;
     padding-left: 4%;
   }
@@ -67,7 +67,7 @@ const ScButton = styled.div`
     animation-fill-mode: forwards;
     background: hsl(181, 66%, 47%);
   }
-  @media (max-width: 700px) {
+  @media (max-width: 1000px) {
     margin-top: 20px;
     width: 100%;
   }
