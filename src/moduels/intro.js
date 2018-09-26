@@ -22,7 +22,8 @@ const ScIntroWrapper = styled.div`
 const ScText = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-around;
+  height: 65vh;
   @media (min-width: 2750px) {
     width: 40%;
   }
