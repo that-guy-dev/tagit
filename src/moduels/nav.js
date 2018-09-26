@@ -5,8 +5,7 @@ import { fadeTop } from '../utility/animation';
 import { LogoW } from '../assets/icon';
 
 const ScNavWrapper = styled.div`
-  height: 150px;
-  margin: 0 auto 50px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: space-between;
