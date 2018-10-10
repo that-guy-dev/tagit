@@ -11,6 +11,7 @@ const ScIntroWrapper = styled.div`
   position: relative;
   z-index: 10;
   padding: 0 0 0 10%;
+  margin-bottom: 7%;
   @media (min-width: 2150px) {
     padding: 0 0 0 25%;
   }
@@ -22,7 +23,8 @@ const ScIntroWrapper = styled.div`
 const ScText = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-around;
+  height: 65vh;
   @media (min-width: 2750px) {
     width: 40%;
   }
