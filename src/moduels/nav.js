@@ -16,9 +16,13 @@ const ScNavWrapper = styled.div`
   opacity: 0;
   animation: ${fadeTop} 1s ease-in-out;
   animation-fill-mode: forwards;
+  @media (max-width: 761px) {
+    margin: 0;
+  }
   @media (min-width: 2150px) {
     padding: 0 25%;
   }
+  
 `
 const ScNavItemWrapper = styled.div`
   display: flex;
