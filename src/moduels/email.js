@@ -62,11 +62,18 @@ const ScButton = styled.div`
   justify-content: center;
   border-radius: 5px;
   cursor: pointer;
-  &:hover {
-    animation: ${change} .3s linear;
-    animation-fill-mode: forwards;
-    background: hsl(181, 66%, 47%);
-  }
+  ${props => props.idle && css`
+    &:hover {
+      animation: ${change} .3s linear;
+      animation-fill-mode: forwards;
+      background: hsl(181, 66%, 47%);
+    }
+  `}
+  ${props => props.sending && css`
+    &:hover {
+      background: #40359C;
+    }
+  `}
   @media (max-width: 1000px) {
     margin-top: 20px;
     width: 100%;
@@ -142,8 +149,8 @@ render() {
         <ScEmail>
             <ScInput placeholder="Email..." onChange={this.handleEmail}/>
             {this.state.spinner
-              ? <ScButton onClick={this.signUp}><Loader/></ScButton>
-              : <ScButton onClick={this.signUp}>Submit</ScButton>
+              ? <ScButton sending onClick={this.signUp}><Loader/></ScButton>
+              : <ScButton idle onClick={this.signUp}>Submit</ScButton>
             }           
         </ScEmail>
         {this.state.success && <ScSpan yes>Welcome to the family, we will keep you updated 👏</ScSpan>}
