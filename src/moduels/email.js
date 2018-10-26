@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import axios from 'axios';
-import Loader from '../utility/loader';
+import SubmitLoading from '../utility/submitloading';
 import { fadeBottom, change } from '../utility/animation';
 
 const ScMessageEmail = styled.p`  
@@ -149,7 +149,7 @@ render() {
         <ScEmail>
             <ScInput placeholder="Email..." onChange={this.handleEmail}/>
             {this.state.spinner
-              ? <ScButton sending onClick={this.signUp}><Loader/></ScButton>
+              ? <ScButton sending onClick={this.signUp}><SubmitLoading/></ScButton>
               : <ScButton idle onClick={this.signUp}>Submit</ScButton>
             }           
         </ScEmail>
