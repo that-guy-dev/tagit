@@ -70,6 +70,9 @@ const ScButton = styled.div`
       background: hsl(181, 66%, 47%);
     }
   `}
+  ${props => props.disabled === true && css`
+    background: rgba(57, 60, 63, 0.13);
+  `}
   ${props => props.sending && css`
     &:hover {
       background: #40359C;

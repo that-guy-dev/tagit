@@ -17,6 +17,7 @@ export const fadeOut = keyframes`
   }
   100% {
     opacity: 0;
+    z-index: -1;
   }
 `;
 
