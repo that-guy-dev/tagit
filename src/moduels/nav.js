@@ -14,7 +14,7 @@ const ScNavWrapper = styled.div`
   z-index: 10;
   padding: 0 10%;
   opacity: 0;
-  animation: ${fadeTop} 1s ease-in-out;
+  animation: ${fadeTop} 1.6s ease-in-out;
   animation-fill-mode: forwards;
   @media (max-width: 761px) {
     margin: 0;

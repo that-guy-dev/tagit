@@ -5,6 +5,7 @@ import { fadeBottom, fadeRight } from '../utility/animation';
 import App from '../assets/app.png';
 import Email from './email';
 
+
 const ScIntroWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -48,6 +49,7 @@ const ScHeadline = styled.h1`
   opacity: 0;
   animation: ${fadeBottom} 1s ease-in-out;
   animation-fill-mode: forwards;
+  animation-delay: 1.2s;
 `
 
 const ScMessage = styled.p`  
@@ -58,7 +60,7 @@ const ScMessage = styled.p`
   opacity: 0;
   animation: ${fadeBottom} 1s ease-in-out;
   animation-fill-mode: forwards;
-  animation-delay: 0.2s; 
+  animation-delay: 1.4s; 
 `
 const ScImg = styled.div`
   background: url( ${App} ) no-repeat;
@@ -71,7 +73,7 @@ const ScImg = styled.div`
   opacity: 0;
   animation: ${fadeRight} 1s ease-in-out;
   animation-fill-mode: forwards;
-  animation-delay: 0.5s;
+  animation-delay: 1.8s;
   @media (max-width: 760px) {
     left: -30px;
     top: 100px;

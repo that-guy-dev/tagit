@@ -15,7 +15,7 @@ const ScEmailSection = styled.div`
   opacity: 0;
   animation: ${fadeBottom} 1s ease-in-out;
   animation-fill-mode: forwards;
-  animation-delay: 0.5s;
+  animation-delay: 1.8s;
 `
 
 const ScEmail = styled.div`  
