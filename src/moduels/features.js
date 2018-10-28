@@ -4,13 +4,16 @@ import Fade from 'react-reveal/Fade';
 import Email from './email';
 
 import { Save, Organize, Reminder, Highlight, Recommended, Central, Collab, Offline } from '../assets/icon';
-import { fadeTop, } from '../utility/animation';
+import { fadeTop, opacity} from '../utility/animation';
 
 
 const ScWhy = styled.div`
   z-index: 100;
   position: relative;
   padding: 0 10%;
+  animation: ${opacity} 1s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 2.3s;
   @media (min-width: 2150px) {
     padding: 0 25%;
   }
