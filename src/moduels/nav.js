@@ -19,6 +19,9 @@ const ScNavWrapper = styled.div`
   animation-delay: 1s;
   @media (max-width: 761px) {
     margin: 0;
+    height: 90px;
+    position: relative;
+    top: 5px;
   }
   @media (min-width: 2150px) {
     padding: 0 25%;
