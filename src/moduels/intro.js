@@ -51,7 +51,7 @@ const ScHeadline = styled.h1`
   animation-fill-mode: forwards;
   animation-delay: 1.2s;
   @media (max-width: 760px) {
-    font-size: 2.2em;
+    font-size: 2.3em;
     line-height: 45px;
   }
 `
