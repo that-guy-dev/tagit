@@ -35,6 +35,9 @@ const ScText = styled.div`
 const ScItem = styled.div`
   ${props => props.top && css`
     min-height: 450px;  
+    @media (max-width: 760px) {
+      min-height: 0;  
+    }
   `}  
 `
 
@@ -47,6 +50,10 @@ const ScHeadline = styled.h1`
   animation: ${fadeBottom} 1s ease-in-out;
   animation-fill-mode: forwards;
   animation-delay: 1.2s;
+  @media (max-width: 760px) {
+    font-size: 2.2em;
+    line-height: 45px;
+  }
 `
 
 const ScMessage = styled.p`  
