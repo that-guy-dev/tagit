@@ -34,10 +34,7 @@ const ScText = styled.div`
 
 const ScItem = styled.div`
   ${props => props.top && css`
-    margin-bottom: 200px;    
-    @media (max-width: 761px) {
-      margin-bottom: 10px;    
-    }
+    min-height: 450px;  
   `}  
 `
 
