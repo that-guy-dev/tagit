@@ -10,7 +10,7 @@ import { fadeTop, opacity} from '../utility/animation';
 const ScWhy = styled.div`
   z-index: 100;
   position: relative;
-  padding: 0 10%;
+  padding: 0 15%;
   animation: ${opacity} 1s ease-in-out;
   animation-fill-mode: both;
   animation-delay: 2.3s;
@@ -48,7 +48,7 @@ const ScFeatureHeadline = styled.h1`
   `
 
 const ScFeatureItemWrapper = styled.div`
-  width: calc(100vw/2.8);
+  width: calc(100vw/3.2);
   height: auto;  
   background: #fff;
   box-shadow: 0px 11px 27px rgba(0,0,0,0.25);
