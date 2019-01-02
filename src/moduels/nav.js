@@ -12,7 +12,7 @@ const ScNavWrapper = styled.div`
   justify-content: space-between;
   position: relative;
   z-index: 10;
-  padding: 0 10%;
+  padding: 0 15%;
   opacity: 0;
   animation: ${fadeTop} 1.3s ease-in-out;
   animation-fill-mode: forwards;
