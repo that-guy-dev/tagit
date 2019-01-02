@@ -11,7 +11,7 @@ const ScIntroWrapper = styled.div`
   justify-content: space-between;
   position: relative;
   z-index: 10;
-  padding: 0 0 0 10%;
+  padding: 0 0 0 15%;
   @media (min-width: 2150px) {
     padding: 0 0 0 25%;
   }
