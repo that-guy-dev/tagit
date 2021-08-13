@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/that-guy-dev/tagit#readme",
   "dependencies": {
-    "next": "^6.1.1",
+    "next": "^11.1.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "styled-components": "^3.3.3"
